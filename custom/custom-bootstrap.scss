@@ -49,7 +49,7 @@ $grid-gutter-width: 0.5rem;
 
 $card-bg: map-get($theme-colors, "dark");
 $card-color: map-get($theme-colors, "info");
-$card-border-radius: 3rem;
+$card-border-radius: 2rem;
 
 //8-9-10
 
@@ -65,7 +65,7 @@ $new-theme-colors: (
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
 
 //11
-$new-pill-radius: 3rem;
+$new-pill-radius: 2rem;
 
 $badge-border-radius: $new-pill-radius;
 $input-border-radius: $new-pill-radius;
@@ -81,9 +81,23 @@ $new-epicode-colors: (
 $theme-colors: map-merge($theme-colors, $new-epicode-colors);
 
 //13
-
+// nell'html
 //14
 
 //15
+$new-grid-breakpoints: (
+  "3xl": 1600px,
+  "4xl": 1800px,
+);
+$grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
+
+$new-container-max-widths: (
+  "3xl": 1520px,
+  "4xl": 1720px,
+);
+$container-max-widths: map-merge(
+  $container-max-widths,
+  $new-container-max-widths
+);
 
 @import "./scss/bootstrap.scss";

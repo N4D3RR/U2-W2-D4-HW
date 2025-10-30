@@ -1,0 +1,89 @@
+@import "./scss/functions";
+@import "./scss/variables";
+
+//1
+$fs7: 0.9rem;
+$fs8: 0.8rem;
+$fs9: 0.7rem;
+$fs10: 0.6rem;
+
+$moreFontSizes: (
+  7: $fs7,
+  8: $fs8,
+  9: $fs9,
+  10: $fs10,
+);
+
+$font-sizes: map-merge($font-sizes, $moreFontSizes);
+
+//2
+$bw-6: 6px;
+$bw-7: 7px;
+$bw-8: 8px;
+$bw-9: 9px;
+$bw-10: 10px;
+
+$more-border-widths: (
+  6: $bw-6,
+  7: $bw-7,
+  8: $bw-8,
+  9: $bw-9,
+  10: $bw-10,
+);
+$border-widths: map-merge($border-widths, $more-border-widths);
+
+// 3
+// nell'html
+
+// 4
+// nell'html
+
+// 5 modifico le variabili prima di importare bootstrap.scss per modificarle
+$btn-padding-x: 2.5rem;
+$btn-padding-y: 0.75rem;
+
+//6
+$grid-gutter-width: 0.5rem;
+
+//7
+
+$card-bg: map-get($theme-colors, "dark");
+$card-color: map-get($theme-colors, "info");
+$card-border-radius: 3rem;
+
+//8-9-10
+
+$new-danger: #ff0077;
+$new-info: #00ffea;
+$new-light: #f3eeff;
+
+$new-theme-colors: (
+  danger: $new-danger,
+  info: $new-info,
+  light: $new-light,
+);
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+//11
+$new-pill-radius: 3rem;
+
+$badge-border-radius: $new-pill-radius;
+$input-border-radius: $new-pill-radius;
+$btn-border-radius: $new-pill-radius;
+$border-radius: $new-pill-radius;
+
+//12
+$new-epicode-colors: (
+  "epicode-1": #5726c3,
+  "epicode-2": #8625a5,
+  "epicode-3": #cb2376,
+);
+$theme-colors: map-merge($theme-colors, $new-epicode-colors);
+
+//13
+
+//14
+
+//15
+
+@import "./scss/bootstrap.scss";
